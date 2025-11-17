@@ -7,8 +7,10 @@ const VideoPlayer = () => {
     <div className="p-4">
       <iframe
         src={`https://rumble.com/embed/${video}`}
-        className="w-full h-[70vh]"
+        className="w-full h-[70vh] rounded-lg"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
+        title="Rumble Video Player"
       ></iframe>
     </div>
   );
