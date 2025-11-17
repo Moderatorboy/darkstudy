@@ -1,13 +1,19 @@
-import { useParams } from 'react-router-dom';
-import { lectures } from '../data/dummyData';
-import LectureTabs from '../components/LectureTabs';
+import ChapterCard from "../components/ChapterCard";
 
-export default function Chapter() {
-  const { chapterId } = useParams();
-  const lec = lectures[chapterId] || [];
+const Chapters = () => {
+  const chapters = [
+    { id: "ch1", name: "Basic Concepts" },
+    { id: "ch2", name: "Atomic Structure" },
+    { id: "ch3", name: "Chemical Bonding" }
+  ];
+
   return (
-    <div className="p-4 space-y-4">
-      {lec.map(l => <LectureTabs key={l.id} lecture={l} />)}
+    <div className="p-4 space-y-3">
+      {chapters.map((c) => (
+        <ChapterCard key={c.id} data={c} />
+      ))}
     </div>
   );
-}
+};
+
+export default Chapters;
