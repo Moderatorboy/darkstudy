@@ -9,8 +9,8 @@ const Subjects = () => {
 
   return (
     <div className="grid grid-cols-2 gap-4 p-4">
-      {subjects.map((s) => (
-        <SubjectCard key={s.id} data={s} />
+      {subjects.map((subject) => (
+        <SubjectCard key={subject.id} data={subject} />
       ))}
     </div>
   );
