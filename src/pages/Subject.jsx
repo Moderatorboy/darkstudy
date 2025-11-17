@@ -1,4 +1,4 @@
-import SubjectCard from "../components/SubjectCard";
+import SubjectCard from "../data/SubjectCard";
 
 const Subjects = () => {
   const subjects = [
