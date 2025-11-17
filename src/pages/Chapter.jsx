@@ -1,6 +1,9 @@
-import ChapterCard from "../components/ChapterCard";
+import ChapterCard from "../data/ChapterCard";
+import { useParams } from "react-router-dom";
 
 const Chapters = () => {
+  const { subjectId } = useParams();
+
   const chapters = [
     { id: "ch1", name: "Basic Concepts" },
     { id: "ch2", name: "Atomic Structure" },
@@ -9,8 +12,12 @@ const Chapters = () => {
 
   return (
     <div className="p-4 space-y-3">
-      {chapters.map((c) => (
-        <ChapterCard key={c.id} data={c} />
+      {chapters.map((chapter) => (
+        <ChapterCard 
+          key={chapter.id} 
+          chapter={chapter}
+          subjectId={subjectId}
+        />
       ))}
     </div>
   );
