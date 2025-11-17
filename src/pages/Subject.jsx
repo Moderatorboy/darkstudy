@@ -1,13 +1,19 @@
-import { useParams } from 'react-router-dom';
-import { chapters } from '../data/dummyData';
-import ChapterCard from '../components/ChapterCard';
+import SubjectCard from "../components/SubjectCard";
 
-export default function Subject() {
-  const { subjectId } = useParams();
-  const chaps = chapters[subjectId] || [];
+const Subjects = () => {
+  const subjects = [
+    { id: "chem", name: "CHEMISTRY", thumbnail: "/chem.jpg" },
+    { id: "phy", name: "PHYSICS", thumbnail: "/phy.jpg" },
+    { id: "math", name: "MATHS", thumbnail: "/math.jpg" }
+  ];
+
   return (
-    <div className="p-4 grid gap-4">
-      {chaps.map(c => <ChapterCard key={c.id} chapter={c} subjectId={subjectId} />)}
+    <div className="grid grid-cols-2 gap-4 p-4">
+      {subjects.map((s) => (
+        <SubjectCard key={s.id} data={s} />
+      ))}
     </div>
   );
-}
+};
+
+export default Subjects;
