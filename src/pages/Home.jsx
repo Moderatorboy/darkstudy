@@ -1,10 +1,10 @@
-import SubjectCard from '../components/SubjectCard';
-import { subjects } from '../data/dummyData';
-
-export default function Home() {
+const Home = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-      {subjects.map(s => <SubjectCard key={s.id} subject={s} />)}
+    <div className="p-5 text-white text-center text-2xl">
+      <h1 className="text-4xl font-bold mb-4">Welcome to DarkStudy</h1>
+      <p>Select your batch to continue.</p>
     </div>
   );
-}
+};
+
+export default Home;
