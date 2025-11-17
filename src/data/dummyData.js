@@ -12,12 +12,31 @@ export const chapters = {
   s2: [
     { id: 'c3', name: 'Organic' },
     { id: 'c4', name: 'Inorganic' }
+  ],
+  s3: [
+    { id: 'c5', name: 'Algebra' },
+    { id: 'c6', name: 'Calculus' }
   ]
 };
 
 export const lectures = {
   c1: [
-    { id: 'l1', title: 'Lecture 1', rumble: 'https://rumble.com/embed/example1' },
-    { id: 'l2', title: 'Lecture 2', rumble: 'https://rumble.com/embed/example2' }
+    { 
+      id: 'l1', 
+      title: 'Lecture 1',
+      url: 'https://rumble.com/embed/example1'
+    },
+    { 
+      id: 'l2', 
+      title: 'Lecture 2',
+      url: 'https://rumble.com/embed/example2'
+    }
+  ],
+  c2: [
+    {
+      id: 'l3',
+      title: 'Ray Optics – Lecture 1',
+      url: 'https://rumble.com/embed/example3'
+    }
   ]
 };
