@@ -13,15 +13,26 @@ function App() {
       <Navbar />
 
       <Routes>
+        {/* HOME */}
         <Route path="/" element={<Home />} />
-        <Route path="/batches/:batchId" element={<Batches />} />
+
+        {/* SHOW ALL BATCHES */}
+        <Route path="/batches" element={<Batches />} />
+
+        {/* SELECT SUBJECT */}
         <Route path="/subjects/:batchId" element={<Subjects />} />
+
+        {/* SELECT CHAPTER */}
         <Route path="/chapters/:batchId/:subjectId" element={<Chapters />} />
+
+        {/* CONTENT PAGE (LECTURES, NOTES, DPP) */}
         <Route
           path="/content/:batchId/:subjectId/:chapterId"
           element={<Content />}
         />
-        <Route path="/play/:batchId/:video" element={<VideoPlayer />} />
+
+        {/* VIDEO PLAYER */}
+        <Route path="/play/:videoId" element={<VideoPlayer />} />
       </Routes>
     </BrowserRouter>
   );
