@@ -2,14 +2,14 @@ import BatchCard from "../components/BatchCard";
 
 const Batches = () => {
   const batches = [
-    { id: "b1", name: "NEET 2025", thumbnail: "/batch1.jpg" },
-    { id: "b2", name: "JEE MAINS 2025", thumbnail: "/batch2.jpg" }
+    { id: "b1", name: "NEET 2025", thumbnail: "/images/batch1.jpg" },
+    { id: "b2", name: "JEE MAINS 2025", thumbnail: "/images/batch2.jpg" }
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-4 p-4">
-      {batches.map((b) => (
-        <BatchCard key={b.id} data={b} />
+    <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {batches.map((batch) => (
+        <BatchCard key={batch.id} batch={batch} />
       ))}
     </div>
   );
