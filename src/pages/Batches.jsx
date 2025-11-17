@@ -1,4 +1,4 @@
-import BatchCard from "../components/BatchCard";
+import BatchCard from "../data/BatchCard";
 
 const Batches = () => {
   const batches = [
